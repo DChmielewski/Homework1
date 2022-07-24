@@ -13,19 +13,19 @@ public class TokenGenerator {
         int size15 = 15;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj długość tokena (5, 10, 15");
+        System.out.println("Enter token length (5, 10 or 15): ");
         int lenghtFromDescription = scanner.nextInt();
 
 
         if (lenghtFromDescription == size5) {
 //            generator = new StringBuilder(chars);
-            System.out.println(rnd.toString());
+            System.out.println("Your token (5) is: " + rnd.toString());
         } else if (lenghtFromDescription == size10) {
 //            generator = new StringBuilder(chars);
-            System.out.println(rnd.toString());
+            System.out.println("Your token (10) is: " + rnd.toString());
         } else if (lenghtFromDescription == size15) {
 //            generator = new StringBuilder(chars);
-            System.out.println(rnd.toString());
+            System.out.println("Your token (15) is: " + rnd.toString());
         } else {
             System.out.println("Token length incorrect");
         }
