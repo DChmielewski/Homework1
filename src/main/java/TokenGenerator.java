@@ -24,18 +24,18 @@ public class TokenGenerator {
 
             //10
         } else if (lenghtFromDescription == length2) {
-            char[] tokenGenerator1 = new char[length2];
+            char[] tokenGenerator = new char[length2];
 
             for (int i = 0; i < length2; i++)
-                tokenGenerator1[i] = asciAll[randomNumbers.nextInt(asciAll.length)];
-            System.out.println("Your token is: " + new String(tokenGenerator1));
+                tokenGenerator[i] = asciAll[randomNumbers.nextInt(asciAll.length)];
+            System.out.println("Your token is: " + new String(tokenGenerator));
             //15
         } else if (lenghtFromDescription == length3) {
-            char[] tokenGenerator2 = new char[length3];
+            char[] tokenGenerator = new char[length3];
 
             for (int i = 0; i < length3; i++)
-                tokenGenerator2[i] = asciAll[randomNumbers.nextInt(asciAll.length)];
-            System.out.println("Your token is: " + new String(tokenGenerator2));
+                tokenGenerator[i] = asciAll[randomNumbers.nextInt(asciAll.length)];
+            System.out.println("Your token is: " + new String(tokenGenerator));
         } else {
             System.out.println("Token length incorrect");
         }
