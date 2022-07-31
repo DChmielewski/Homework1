@@ -1,31 +1,41 @@
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class TokenGenerator {
     public static void main(String[] args) {
-
-        String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijk"
-                + "lmnopqrstuvwxyz!@#$%&";
-        Random rnd = new Random();
-//        StringBuilder generator = new StringBuilder();
-        int size5 = 5;
-        int size10 = 10;
-        int size15 = 15;
-
+        //metoda random
+        Random randomNumbers = new Random();
+        //tablica charow
+        char[] asciAll = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%&*()".toCharArray();
+        int length = 5;
+        int length2 = 10;
+        int length3 = 15;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter token length (5, 10 or 15): ");
         int lenghtFromDescription = scanner.nextInt();
 
+        //pętelka dla 5
+        if (lenghtFromDescription == length) {
+            char[] tokenGenerator = new char[length];
+            for (int i = 0; i < length; i++)
+                tokenGenerator[i] = asciAll[randomNumbers.nextInt(asciAll.length)];
+            System.out.println("Your token is: " + new String(tokenGenerator));
 
-        if (lenghtFromDescription == size5) {
-//            generator = new StringBuilder(chars);
-            System.out.println("Your token (5) is: " + rnd.toString());
-        } else if (lenghtFromDescription == size10) {
-//            generator = new StringBuilder(chars);
-            System.out.println("Your token (10) is: " + rnd.toString());
-        } else if (lenghtFromDescription == size15) {
-//            generator = new StringBuilder(chars);
-            System.out.println("Your token (15) is: " + rnd.toString());
+            //10
+        } else if (lenghtFromDescription == length2) {
+            char[] tokenGenerator1 = new char[length2];
+
+            for (int i = 0; i < length2; i++)
+                tokenGenerator1[i] = asciAll[randomNumbers.nextInt(asciAll.length)];
+            System.out.println("Your token is: " + new String(tokenGenerator1));
+            //15
+        } else if (lenghtFromDescription == length3) {
+            char[] tokenGenerator2 = new char[length3];
+
+            for (int i = 0; i < length3; i++)
+                tokenGenerator2[i] = asciAll[randomNumbers.nextInt(asciAll.length)];
+            System.out.println("Your token is: " + new String(tokenGenerator2));
         } else {
             System.out.println("Token length incorrect");
         }
